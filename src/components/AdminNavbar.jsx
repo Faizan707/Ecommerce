@@ -1,11 +1,18 @@
 import React from 'react'
-import { useLocation } from 'react-router-dom'
+import { useLocation, useNavigate } from 'react-router-dom'
 import { IoLogOutOutline } from "react-icons/io5";
+import { removeAuthToken } from '../utils/auth';
+import { PAGES } from '../routes/routes';
 
 function AdminNavbar() {
     const location = useLocation()
     const { decodedToken } = location.state || {};
+    const navigate =useNavigate()
+    const handleAdminLogout = () =>{
+      removeAuthToken(decodedToken.role==="admin")
+      navigate(PAGES.Home)
 
+    }
   return (
     <>
       <nav className="bg-white py-4 shadow-md px-6 md:px-12">
@@ -21,7 +28,7 @@ function AdminNavbar() {
                 {decodedToken?.role || 'Role'}
               </p>
             </div>
-            <button className="flex items-center justify-center bg-red-600 hover:bg-red-700 text-white p-2 md:p-3 rounded-full transition duration-300">
+            <button className="flex items-center justify-center bg-red-600 hover:bg-red-700 text-white p-2 md:p-3 rounded-full transition duration-300" onClick={handleAdminLogout}>
               <IoLogOutOutline size={24} />
             </button>
           </div>

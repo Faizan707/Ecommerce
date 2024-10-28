@@ -12,7 +12,7 @@ function AdminLogin() {
   });
 
   const navigate = useNavigate();
-  const { login, loading, error, success, setError, setSuccess } = useAdminLogin();
+  const { login, loading, error, success, setError } = useAdminLogin();
 
   const handleSubmit = async (e) => {
     e.preventDefault();

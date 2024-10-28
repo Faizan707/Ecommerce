@@ -6,5 +6,7 @@ export const PAGES = {
     AdminLogin:"/admin-login",
     Register:"/signup",
     AdminDashboard:"/admin-dashboard",
-    Cart:"/cart"
+    Cart:"/cart",
+    ProductsByCategories:"/categories/:id/:name"
+    
 }

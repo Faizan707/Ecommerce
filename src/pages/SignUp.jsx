@@ -44,7 +44,7 @@ function SignUp() {
     <>
     <Navbar/>
     <form
-      className="w-auto sm:w-[400px] h-auto bg-white p-8 shadow-md rounded-lg flex flex-col justify-center m-auto"
+      className="w-auto sm:w-[400px] h-auto bg-white p-8 shadow-md rounded-lg flex flex-col justify-center m-auto mt-10"
       onSubmit={handleSubmit}
     >
       <h2 className="text-2xl font-bold text-center mb-6">Sign Up</h2>

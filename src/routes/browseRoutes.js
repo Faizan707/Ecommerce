@@ -5,6 +5,7 @@ import SignUp from "../pages/SignUp.jsx"
 import Login from "../pages/Login.jsx"
 import AdminLogin from "../pages/AdminLogin.jsx"
 import AdminDashboard from "../pages/AdminDashboard.jsx"
+import ProductsByCategories from "../pages/ProductsByCategories.jsx"
  export const router = createBrowserRouter([
     
     {
@@ -26,6 +27,10 @@ import AdminDashboard from "../pages/AdminDashboard.jsx"
     {
         path:PAGES.AdminDashboard,
         element:<AdminDashboard/>
+    },
+    {
+        path:PAGES.ProductsByCategories,
+        element:<ProductsByCategories/>
     }
 
 
