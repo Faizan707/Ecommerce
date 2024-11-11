@@ -65,7 +65,6 @@ function Checkout() {
 
     const handleSubmit = async () => {
         if (isAuthenticated) {
-            console.log('Submitting Order Data: ', orderData); // Log order data
             try {
                 const response = await createOrder(orderData);
                 console.log('Order created successfully:', response);
