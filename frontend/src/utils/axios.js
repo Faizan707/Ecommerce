@@ -1,6 +1,6 @@
 import { getAuthToken } from "./auth.js";
 import axios from "axios";
-const BaseUrl = 'http://localhost:8000';
+const BaseUrl = 'https://ecommerce-backend-cg9v.onrender.com';
 export const getAxiosInstance = async (
   isAuth = false,
   customHeaders = {
